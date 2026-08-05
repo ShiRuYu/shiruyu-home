@@ -1,0 +1,105 @@
+/* ===== 博客模块样式 ===== */
+.blog-wrap { max-width: 780px; margin: 0 auto; }
+
+.blog-head { margin-bottom: 28px; }
+.blog-head h2 { font-size: 30px; font-weight: 800; }
+.blog-sub { color: #94a3b8; margin-top: 4px; font-size: 14px; }
+
+/* 列表卡片 */
+.post-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.post-card:hover {
+  transform: translateY(-3px);
+  border-color: #22d3ee;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+.post-card h3 { font-size: 18px; margin-bottom: 6px; }
+.post-card p { color: #94a3b8; font-size: 14px; }
+.post-meta { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.post-tag {
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.12);
+  color: #22d3ee;
+  border: 1px solid rgba(34, 211, 238, 0.25);
+}
+.post-date { color: #64748b; font-size: 12px; align-self: center; }
+
+/* 文章详情 */
+.back-btn {
+  appearance: none;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #94a3b8;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.2s;
+}
+.back-btn:hover { color: #e2e8f0; border-color: #22d3ee; }
+
+#blog-article { animation: fade-up 0.35s ease-out; }
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+#blog-article h1 { font-size: 26px; margin-bottom: 8px; }
+#blog-article .a-meta { color: #64748b; font-size: 13px; margin-bottom: 20px; }
+#blog-article h2 {
+  font-size: 20px;
+  margin: 26px 0 10px;
+  padding-left: 12px;
+  border-left: 3px solid #22d3ee;
+}
+#blog-article p { color: #cbd5e1; margin-bottom: 12px; }
+#blog-article ul, #blog-article ol { color: #cbd5e1; margin: 0 0 12px 22px; }
+#blog-article li { margin-bottom: 4px; }
+#blog-article code {
+  background: rgba(34, 211, 238, 0.12);
+  color: #67e8f9;
+  padding: 1px 6px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+#blog-article pre {
+  background: #0b1220;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 14px 0 18px;
+}
+#blog-article pre code {
+  background: none;
+  padding: 0;
+  color: #e2e8f0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+#blog-article blockquote {
+  border-left: 3px solid #a78bfa;
+  background: rgba(167, 139, 250, 0.08);
+  padding: 10px 16px;
+  margin: 14px 0;
+  border-radius: 0 10px 10px 0;
+  color: #c4b5fd;
+}
+
+/* Prism 主题微调 */
+pre[class*="language-"] {
+  background: #0b1220 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
