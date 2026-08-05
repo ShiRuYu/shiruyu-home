@@ -1,8 +1,29 @@
 {
   "site": "ShiRuYu",
   "modules": [
-    { "id": "blog", "name": "个人博客", "branch": "blog", "commit": "80feb1db15534a60923e43bd95ae23c75a29f74d", "desc": "技术笔记与踩坑记录", "icon": "✍️" },
-    { "id": "cg", "name": "CG 画廊", "branch": "cg", "commit": "2b2b0ad2401aded57cef59f9e75ba57585be197f", "desc": "动漫高清图集，瀑布流画廊", "icon": "🎨" },
-    { "id": "lottery", "name": "抽签", "branch": "lottery", "commit": "4abc715aa1270064f006aee622da3dc6ee9c6fc7", "desc": "每日一签，试试手气", "icon": "🎋" }
+    {
+      "id": "blog",
+      "name": "个人博客",
+      "branch": "blog",
+      "commit": "74d3bebcaafce7e0290fd2260e714cd589e345dd",
+      "desc": "技术笔记与踩坑记录",
+      "icon": "✍️"
+    },
+    {
+      "id": "cg",
+      "name": "CG 画廊",
+      "branch": "cg",
+      "commit": "2b2b0ad2401aded57cef59f9e75ba57585be197f",
+      "desc": "动漫高清图集，瀑布流画廊",
+      "icon": "🎨"
+    },
+    {
+      "id": "lottery",
+      "name": "抽签",
+      "branch": "lottery",
+      "commit": "4abc715aa1270064f006aee622da3dc6ee9c6fc7",
+      "desc": "每日一签，试试手气",
+      "icon": "🎋"
+    }
   ]
 }
