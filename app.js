@@ -89,6 +89,8 @@ async function loadModule(id) {
     st.textContent = css;
     document.head.appendChild(st);
 
+    // 注入模块自身的 CDN 引用, 供模块拉取同 commit 下的资源(如文章索引)
+    window.__MODULE_REF__ = ref;
     new Function(js)();
     if (window.ModuleLifecycle && typeof window.ModuleLifecycle.init === 'function') {
       window.ModuleLifecycle.init(view);
