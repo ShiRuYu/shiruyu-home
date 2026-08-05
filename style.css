@@ -6,6 +6,24 @@
 .blog-sub { color: #94a3b8; margin-top: 4px; font-size: 14px; }
 
 /* 列表卡片 */
+.post-group { margin-bottom: 10px; }
+.group-title {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 600;
+  margin: 26px 0 12px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.group-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent);
+}
+
 .post-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -31,7 +49,18 @@
   color: #22d3ee;
   border: 1px solid rgba(34, 211, 238, 0.25);
 }
-.post-date { color: #64748b; font-size: 12px; align-self: center; }
+.post-tag.tag-cat {
+  background: rgba(167, 139, 250, 0.14);
+  color: #a78bfa;
+  border-color: rgba(167, 139, 250, 0.35);
+  font-weight: 600;
+}
+.post-tag.hot-tag {
+  background: rgba(244, 63, 94, 0.12);
+  color: #fb7185;
+  border-color: rgba(244, 63, 94, 0.3);
+}
+.post-date { color: #64748b; font-size: 12px; align-self: center; margin-left: auto; }
 
 /* 文章详情 */
 .back-btn {
