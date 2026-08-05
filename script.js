@@ -2,6 +2,7 @@
  * CG 画廊内容模块 (cg 分支)
  * 图源: nekos.best 公开 API (neko + waifu 混合)
  * 功能: 瀑布流 + 灯箱 + 喜欢收藏(localStorage) + 只看喜欢筛选
+ * 性能: 元数据一次拉取, 图片分批渲染(滚动加载) + loading=lazy
  * 喜欢数据与 WebDAV 备份共享键名: shiruyu-cg-likes
  * ========================================================= */
 (function () {
@@ -9,11 +10,16 @@
 
   var API = 'https://nekos.best/api/v2/';
   var LIKES_KEY = 'shiruyu-cg-likes';
+  var BATCH_SIZE = 6;        // 每批渲染 6 张
+  var TOTAL = 30;            // 总张数
 
   var gridEl = null;
   var items = [];
   var likes = loadLikes();
   var filterLiked = false;
+  var renderedCount = 0;
+  var observer = null;
+  var sentinel = null;
 
   function loadLikes() {
     try { return JSON.parse(localStorage.getItem(LIKES_KEY)) || []; }
@@ -64,10 +70,51 @@
       '</div>';
   }
 
+  function bindImages(scope) {
+    (scope || gridEl).querySelectorAll('.cg-item img').forEach(function (img) {
+      img.onload = function () {
+        var el = img.closest('.cg-item');
+        if (el) el.classList.add('show');
+      };
+      if (img.complete && img.naturalWidth > 0) {
+        var el = img.closest('.cg-item');
+        if (el) el.classList.add('show');
+      }
+    });
+  }
+
+  /* 渲染下一批图片到网格 */
+  function renderNextBatch() {
+    if (renderedCount >= items.length) return;
+    var end = Math.min(renderedCount + BATCH_SIZE, items.length);
+    var frag = items.slice(renderedCount, end).map(function (im, j) {
+      return cardHtml(im, renderedCount + j);
+    }).join('');
+    gridEl.insertAdjacentHTML('beforeend', frag);
+    bindImages();
+    renderedCount = end;
+    if (renderedCount >= items.length && sentinel) {
+      sentinel.style.display = 'none';
+      if (observer) { observer.disconnect(); observer = null; }
+    }
+  }
+
+  function ensureObserver() {
+    if (observer || filterLiked) return;
+    sentinel = document.getElementById('cg-sentinel');
+    if (!sentinel) return;
+    observer = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) renderNextBatch();
+    }, { rootMargin: '800px' });
+    observer.observe(sentinel);
+  }
+
   function render(imgs) {
     items = imgs;
+    renderedCount = 0;
+    gridEl.innerHTML = '';
     if (filterLiked) {
-      // 只看喜欢: 直接用本地喜欢数据渲染(不依赖当前批次)
+      // 只看喜欢: 直接用本地喜欢数据渲染(量小, 一次渲染)
       var data = likes.slice().reverse(); // 最新喜欢在前
       if (!data.length) {
         gridEl.innerHTML = '<div class="loading" style="padding:60px 0">还没有喜欢的图，去画廊点 ♥ 收藏吧</div>';
@@ -76,37 +123,11 @@
       gridEl.innerHTML = data.map(function (im, i) {
         return cardHtml(im, i);
       }).join('');
-    } else {
-      gridEl.innerHTML = imgs.map(function (im, i) {
-        return cardHtml(im, i);
-      }).join('');
+      bindImages();
+      return;
     }
-
-    gridEl.querySelectorAll('.cg-item').forEach(function (el) {
-      var img = el.querySelector('img');
-      img.onload = function () { el.classList.add('show'); };
-      if (img.complete && img.naturalWidth > 0) el.classList.add('show');
-      el.onclick = function (e) {
-        if (e.target.classList.contains('cg-like')) return; // 喜欢按钮不触发灯箱
-        openLightbox(parseInt(el.dataset.i, 10));
-      };
-      var likeBtn = el.querySelector('.cg-like');
-      likeBtn.onclick = function () {
-        var url = el.querySelector('img').src;
-        var im = getLike(url);
-        if (!im) {
-          // 从当前批次补全数据
-          var idx = parseInt(el.dataset.i, 10);
-          im = filterLiked ? null : items[idx];
-        }
-        if (!im) return;
-        var nowLiked = toggleLike(im);
-        el.classList.toggle('liked', nowLiked);
-        if (filterLiked && !nowLiked) {
-          el.remove(); // 取消喜欢且在看喜欢列表 → 移除卡片
-        }
-      };
-    });
+    renderNextBatch();
+    ensureObserver();
   }
 
   function openLightbox(i) {
@@ -140,6 +161,7 @@
       var f = document.getElementById('cg-like-filter');
       if (f) f.classList.remove('active');
     }
+    if (observer) { observer.disconnect(); observer = null; }
     gridEl.innerHTML = '<div class="loading" style="padding:60px 0">正在拉取画师图集 …</div>';
     Promise.all([fetchBatch('neko', 18), fetchBatch('waifu', 12)])
       .then(function (arrs) {
@@ -197,10 +219,30 @@
       document.addEventListener('keydown', function esc(e) {
         if (e.key === 'Escape') closeLightbox();
       });
+      // 网格点击事件委托(分批渲染也能命中)
+      gridEl.addEventListener('click', function (e) {
+        if (e.target.classList.contains('cg-like')) {
+          var el = e.target.closest('.cg-item');
+          var url = el.querySelector('img').src;
+          var im = getLike(url);
+          if (!im) {
+            var idx = parseInt(el.dataset.i, 10);
+            im = filterLiked ? null : items[idx];
+          }
+          if (!im) return;
+          var nowLiked = toggleLike(im);
+          el.classList.toggle('liked', nowLiked);
+          if (filterLiked && !nowLiked) el.remove();
+          return;
+        }
+        var card = e.target.closest('.cg-item');
+        if (card) openLightbox(parseInt(card.dataset.i, 10));
+      });
       saveLikes(); // 初始化计数
       loadAll(null);
     },
     destroy: function () {
+      if (observer) { observer.disconnect(); observer = null; }
       if (gridEl) gridEl.innerHTML = '';
       closeLightbox();
     }
