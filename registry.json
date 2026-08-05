@@ -1,8 +1,0 @@
-{
-  "site": "ShiRuYu",
-  "modules": [
-    { "id": "blog", "name": "个人博客", "branch": "blog", "desc": "技术笔记与踩坑记录", "icon": "✍️" },
-    { "id": "cg", "name": "CG 画廊", "branch": "cg", "desc": "动漫高清图集，瀑布流画廊", "icon": "🎨" },
-    { "id": "lottery", "name": "抽签", "branch": "lottery", "desc": "每日一签，试试手气", "icon": "🎋" }
-  ]
-}
