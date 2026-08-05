@@ -1,9 +1,175 @@
 {
- "updatedAt": "2026-08-05 00:00:00",
- "total": 3,
+ "updatedAt": "2026-08-05 17:40:34",
+ "total": 13,
  "articles": [
-  {"title": "shiyu-ai 教育平台架构：Java 21 + Spring Boot + langgraph4j", "date": "2026-07-20", "category": "架构", "hot": "", "tags": ["Java", "架构", "langgraph4j"], "path": "2026-07/2026-07-20-shiyu-ai平台架构.md", "source": ""},
-  {"title": "FongMi TV 蜘蛛 DEX 打包全流程踩坑", "date": "2026-07-12", "category": "逆向", "hot": "", "tags": ["FongMi", "DEX", "逆向"], "path": "2026-07/2026-07-12-fongmi-tv蜘蛛dex打包.md", "source": ""},
-  {"title": "Sa-Token 线程上下文：ThreadLocal 与跨线程传播", "date": "2026-06-28", "category": "并发", "hot": "", "tags": ["Sa-Token", "ThreadLocal", "并发"], "path": "2026-06/2026-06-28-sa-token线程上下文.md", "source": ""}
+  {
+   "title": "中方公布5项对美反制措施",
+   "date": "2026-08-05",
+   "category": "国际",
+   "hot": "8327981",
+   "tags": [
+    "中美关系",
+    "反制措施",
+    "外交"
+   ],
+   "path": "2026-08/2026-08-05-01-中方公布5项对美反制措施.md",
+   "source": "https://www.toutiao.com/trending/7669757913359663131/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227669757913359663131%22%2C%22hot_board_impr_id%22%3A%2220260805174025A672396723370FEA27B7%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E4%B8%AD%E6%96%B9%E5%85%AC%E5%B8%835%E9%A1%B9%E5%AF%B9%E7%BE%8E%E5%8F%8D%E5%88%B6%E6%8E%AA%E6%96%BD%22%7D&rank=&style_id=40132&topic_id=7669757913359663131"
+  },
+  {
+   "title": "官方通报西安赛格商场坠亡事件",
+   "date": "2026-08-05",
+   "category": "社会",
+   "hot": "7535469",
+   "tags": [
+    "坠亡事件",
+    "官方通报",
+    "安全"
+   ],
+   "path": "2026-08/2026-08-05-02-官方通报西安赛格商场坠亡事件.md",
+   "source": "https://www.toutiao.com/trending/7670261561843367999/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227670261561843367999%22%2C%22hot_board_impr_id%22%3A%2220260805174025A672396723370FEA27B7%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%AE%98%E6%96%B9%E9%80%9A%E6%8A%A5%E8%A5%BF%E5%AE%89%E8%B5%9B%E6%A0%BC%E5%95%86%E5%9C%BA%E5%9D%A0%E4%BA%A1%E4%BA%8B%E4%BB%B6%22%7D&rank=&style_id=40132&topic_id=7670261561843367999"
+  },
+  {
+   "title": "“十五五”专项规划里的柴米油盐",
+   "date": "2026-08-05",
+   "category": "民生",
+   "hot": "6818374",
+   "tags": [
+    "十五五",
+    "民生",
+    "规划"
+   ],
+   "path": "2026-08/2026-08-05-03-“十五五”专项规划里的柴米油.md",
+   "source": "https://www.toutiao.com/article/7670390333091430939"
+  },
+  {
+   "title": "男子出狱前8天被改判死缓",
+   "date": "2026-08-05",
+   "category": "社会",
+   "hot": "6169520",
+   "tags": [
+    "司法改判",
+    "死缓",
+    "法律程序"
+   ],
+   "path": "2026-08/2026-08-05-04-男子出狱前8天被改判死缓.md",
+   "source": "https://www.toutiao.com/trending/7670210632259977270/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227670210632259977270%22%2C%22hot_board_impr_id%22%3A%2220260805174025A672396723370FEA27B7%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E7%94%B7%E5%AD%90%E5%87%BA%E7%8B%B1%E5%89%8D8%E5%A4%A9%E8%A2%AB%E6%94%B9%E5%88%A4%E6%AD%BB%E7%BC%93%22%7D&rank=&style_id=40132&topic_id=7670210632259977270"
+  },
+  {
+   "title": "新台风鲸鱼生成 路径公布",
+   "date": "2026-08-05",
+   "category": "其他",
+   "hot": "5582412",
+   "tags": [
+    "台风",
+    "路径",
+    "气象"
+   ],
+   "path": "2026-08/2026-08-05-05-新台风鲸鱼生成路径公布.md",
+   "source": "https://www.toutiao.com/trending/7669963502744223795/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227669963502744223795%22%2C%22hot_board_impr_id%22%3A%2220260805174025A672396723370FEA27B7%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%96%B0%E5%8F%B0%E9%A3%8E%E9%B2%B8%E9%B1%BC%E7%94%9F%E6%88%90+%E8%B7%AF%E5%BE%84%E5%85%AC%E5%B8%83%22%7D&rank=&style_id=40132&topic_id=7669963502744223795"
+  },
+  {
+   "title": "女生感叹在山西错过饭点吃不上热乎饭",
+   "date": "2026-08-05",
+   "category": "社会",
+   "hot": "5051175",
+   "tags": [
+    "旅游",
+    "餐饮服务",
+    "山西"
+   ],
+   "path": "2026-08/2026-08-05-06-女生感叹在山西错过饭点吃不上.md",
+   "source": "https://www.toutiao.com/trending/7669363832125145098/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227669363832125145098%22%2C%22hot_board_impr_id%22%3A%2220260805174025A672396723370FEA27B7%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%A5%B3%E7%94%9F%E6%84%9F%E5%8F%B9%E5%9C%A8%E5%B1%B1%E8%A5%BF%E9%94%99%E8%BF%87%E9%A5%AD%E7%82%B9%E5%90%83%E4%B8%8D%E4%B8%8A%E7%83%AD%E4%B9%8E%E9%A5%AD%22%7D&rank=&style_id=40132&topic_id=7669363832125145098"
+  },
+  {
+   "title": "出租车4天撞4辆公交车被怀疑碰瓷",
+   "date": "2026-08-05",
+   "category": "社会",
+   "hot": "4570492",
+   "tags": [
+    "交通事故",
+    "碰瓷",
+    "出租车"
+   ],
+   "path": "2026-08/2026-08-05-07-出租车4天撞4辆公交车被怀疑.md",
+   "source": "https://www.toutiao.com/trending/7670328433126031411/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%220%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227670328433126031411%22%2C%22hot_board_impr_id%22%3A%2220260805174025A672396723370FEA27B7%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%87%BA%E7%A7%9F%E8%BD%A64%E5%A4%A9%E6%92%9E4%E8%BE%86%E5%85%AC%E4%BA%A4%E8%BD%A6%E8%A2%AB%E6%80%80%E7%96%91%E7%A2%B0%E7%93%B7%22%7D&rank=&style_id=40132&topic_id=7670328433126031411"
+  },
+  {
+   "title": "乌军称未拦截俄军发射的所有28枚导弹",
+   "date": "2026-08-05",
+   "category": "国际",
+   "hot": "4135553",
+   "tags": [
+    "乌克兰",
+    "导弹",
+    "防空"
+   ],
+   "path": "2026-08/2026-08-05-08-乌军称未拦截俄军发射的所有2.md",
+   "source": "https://www.toutiao.com/trending/7670012310002876457/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227670012310002876457%22%2C%22hot_board_impr_id%22%3A%2220260805174025A672396723370FEA27B7%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E4%B9%8C%E5%86%9B%E7%A7%B0%E6%9C%AA%E6%8B%A6%E6%88%AA%E4%BF%84%E5%86%9B%E5%8F%91%E5%B0%84%E7%9A%84%E6%89%80%E6%9C%8928%E6%9E%9A%E5%AF%BC%E5%BC%B9%22%7D&rank=&style_id=40132&topic_id=7670012310002876457"
+  },
+  {
+   "title": "马斯克回应一个月亏掉2.45万亿",
+   "date": "2026-08-05",
+   "category": "财经",
+   "hot": "3742003",
+   "tags": [
+    "马斯克",
+    "财富缩水",
+    "特斯拉"
+   ],
+   "path": "2026-08/2026-08-05-09-马斯克回应一个月亏掉2.45.md",
+   "source": "https://www.toutiao.com/trending/7669518703364640297/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227669518703364640297%22%2C%22hot_board_impr_id%22%3A%2220260805174025A672396723370FEA27B7%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E9%A9%AC%E6%96%AF%E5%85%8B%E5%9B%9E%E5%BA%94%E4%B8%80%E4%B8%AA%E6%9C%88%E4%BA%8F%E6%8E%892.45%E4%B8%87%E4%BA%BF%22%7D&rank=&style_id=40132&topic_id=7669518703364640297"
+  },
+  {
+   "title": "瓜子水饺究竟威胁了美国什么",
+   "date": "2026-08-05",
+   "category": "国际",
+   "hot": "3385904",
+   "tags": [
+    "中美贸易",
+    "食品",
+    "关税"
+   ],
+   "path": "2026-08/2026-08-05-10-瓜子水饺究竟威胁了美国什么.md",
+   "source": "https://www.toutiao.com/trending/7669678969629638697/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227669678969629638697%22%2C%22hot_board_impr_id%22%3A%2220260805174025A672396723370FEA27B7%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E7%93%9C%E5%AD%90%E6%B0%B4%E9%A5%BA%E7%A9%B6%E7%AB%9F%E5%A8%81%E8%83%81%E4%BA%86%E7%BE%8E%E5%9B%BD%E4%BB%80%E4%B9%88%22%7D&rank=&style_id=40132&topic_id=7669678969629638697"
+  },
+  {
+   "title": "shiyu-ai 教育平台架构：Java 21 + Spring Boot + langgraph4j",
+   "date": "2026-07-20",
+   "category": "架构",
+   "hot": "",
+   "tags": [
+    "Java",
+    "架构",
+    "langgraph4j"
+   ],
+   "path": "2026-07/2026-07-20-shiyu-ai平台架构.md",
+   "source": ""
+  },
+  {
+   "title": "FongMi TV 蜘蛛 DEX 打包全流程踩坑",
+   "date": "2026-07-12",
+   "category": "逆向",
+   "hot": "",
+   "tags": [
+    "FongMi",
+    "DEX",
+    "逆向"
+   ],
+   "path": "2026-07/2026-07-12-fongmi-tv蜘蛛dex打包.md",
+   "source": ""
+  },
+  {
+   "title": "Sa-Token 线程上下文：ThreadLocal 与跨线程传播",
+   "date": "2026-06-28",
+   "category": "并发",
+   "hot": "",
+   "tags": [
+    "Sa-Token",
+    "ThreadLocal",
+    "并发"
+   ],
+   "path": "2026-06/2026-06-28-sa-token线程上下文.md",
+   "source": ""
+  }
  ]
 }
