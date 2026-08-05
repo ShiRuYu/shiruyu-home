@@ -57,6 +57,21 @@ body {
 
 .switcher { display: flex; gap: 8px; flex-wrap: wrap; }
 
+.header-actions { display: flex; align-items: center; gap: 12px; }
+
+.settings-btn {
+  appearance: none;
+  width: 36px; height: 36px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--fg-dim);
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.settings-btn:hover { color: var(--fg); border-color: var(--accent); transform: rotate(30deg); }
+
 .switch-btn {
   appearance: none;
   border: 1px solid var(--card-border);
@@ -185,3 +200,96 @@ body {
   .site-header { flex-direction: column; padding: 12px 16px; }
   .container { padding: 20px 14px 40px; }
 }
+
+/* ===== WebDAV 备份设置面板 ===== */
+.modal {
+  position: fixed; inset: 0; z-index: 300;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal[hidden] { display: none; }
+.modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(8, 12, 24, 0.8);
+  backdrop-filter: blur(8px);
+}
+.modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #111a2e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  animation: lb-pop 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+.modal-card h3 { font-size: 19px; margin-bottom: 6px; }
+.modal-tip { font-size: 12px; color: #94a3b8; margin-bottom: 18px; line-height: 1.6; }
+.modal-card label {
+  display: block;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+.modal-card input[type="text"],
+.modal-card input[type="password"] {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 9px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.modal-card input:focus { border-color: #22d3ee; }
+.modal-card .wd-auto {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: #cbd5e1;
+  cursor: pointer;
+}
+.wd-btns { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0 12px; }
+.wd-btns button {
+  appearance: none;
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.wd-btns button:hover { background: rgba(34, 211, 238, 0.22); }
+.wd-btns button.warn {
+  border-color: rgba(244, 63, 94, 0.4);
+  background: rgba(244, 63, 94, 0.1);
+  color: #fb7185;
+}
+.wd-btns button.warn:hover { background: rgba(244, 63, 94, 0.22); }
+.wd-btns button:disabled { opacity: 0.5; cursor: wait; }
+.wd-msg {
+  min-height: 22px;
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.6;
+  word-break: break-all;
+}
+.wd-msg.ok { color: #4ade80; }
+.wd-msg.err { color: #f87171; }
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  width: 32px; height: 32px;
+  border: none; border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #94a3b8;
+  font-size: 14px;
+  cursor: pointer;
+}
+.modal-close:hover { background: rgba(248, 113, 113, 0.7); color: #fff; }

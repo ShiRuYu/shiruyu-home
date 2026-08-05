@@ -17,6 +17,15 @@ ShiRuYu 的个人主页 —— 分支即内容，内部切换。
 - 点击切换 → 经 jsdelivr CDN 拉取目标分支的 `content.html` + `style.css` + `script.js`
 - 注入内容区渲染，无刷新、无 iframe；选择记忆存 `localStorage`，URL hash 可直达（`#/cg`）
 
+## 数据与备份
+
+- 用户数据（CG 喜欢、抽签记录）存浏览器 `localStorage`，键名：
+  - `shiruyu-cg-likes`（CG 喜欢列表）
+  - `shiruyu-lottery-today` / `shiruyu-lottery-hist`（抽签每日签与历史）
+- 右上角 ⚙ 打开 **WebDAV 备份面板**：配置 WebDAV 地址/凭据后，可手动或每日自动备份上述数据
+- 注意：纯前端直连 WebDAV 需要目标服务开启 CORS（允许 PUT/PROPFIND/Authorization）；不支持的
+  服务需经中转（见附录）
+
 ## 新增内容模块
 
 1. 从 master 切出新分支：`git checkout -b <module> master`
