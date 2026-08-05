@@ -2,7 +2,10 @@
   <div class="cg-head">
     <h2>🎨 CG 画廊</h2>
     <p class="cg-sub">图源 nekos.best · 点击图片查看画师与原图</p>
-    <button class="cg-refresh" id="cg-refresh">🔄 换一批</button>
+    <div class="cg-tools">
+      <button class="cg-like-filter" id="cg-like-filter">♥ 喜欢 <span id="cg-like-count">0</span></button>
+      <button class="cg-refresh" id="cg-refresh">🔄 换一批</button>
+    </div>
   </div>
   <div id="cg-grid" class="cg-grid"></div>
   <div id="cg-lightbox" class="cg-lightbox" hidden>
@@ -12,7 +15,10 @@
       <img id="lb-img" alt="CG 大图">
       <div class="lb-info">
         <span id="lb-artist">画师：-</span>
-        <a id="lb-source" href="#" target="_blank" rel="noopener">pixiv 原图 ↗</a>
+        <span class="lb-actions">
+          <button class="lb-like" id="lb-like">♥ 喜欢</button>
+          <a id="lb-source" href="#" target="_blank" rel="noopener">pixiv 原图 ↗</a>
+        </span>
       </div>
     </div>
   </div>
