@@ -72,6 +72,7 @@
   }
 
   function openPost(path) {
+    listEl.hidden = true;
     postEl.hidden = false;
     articleEl.innerHTML = '<div class="loading" style="padding:40px 0">加载文章 …</div>';
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -135,6 +136,7 @@
       document.getElementById('blog-back').onclick = function () {
         postEl.hidden = true;
         listEl.hidden = false;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       };
       injectCss(PRISM_CSS, 'prism-css');
       listEl.innerHTML = '<div class="loading" style="padding:60px 0">加载文章列表 …</div>';
