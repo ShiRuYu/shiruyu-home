@@ -75,10 +75,12 @@ async function loadModule(id) {
   renderSwitcher(id);
   destroyModule();
   try {
-    const base = CDN_BASE + m.branch + '/';
-    const html = await fetchText(base + 'content.html?v=' + DAY);
-    const css = await fetchText(base + 'style.css?v=' + DAY);
-    const js = await fetchText(base + 'script.js?v=' + DAY);
+    // 用 commit hash 引用: 分支引用有 CDN 缓存, commit 引用即时新鲜
+    const ref = m.commit || m.branch;
+    const base = CDN_BASE + ref + '/';
+    const html = await fetchText(base + 'content.html');
+    const css = await fetchText(base + 'style.css');
+    const js = await fetchText(base + 'script.js');
 
     view.innerHTML = html;
 
