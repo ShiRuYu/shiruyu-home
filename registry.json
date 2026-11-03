@@ -5,7 +5,7 @@
       "id": "blog",
       "name": "个人博客",
       "branch": "blog",
-      "commit": "7075702fbd884bf4930ec357d83fa9e8f11ae72b",
+      "commit": "e202f172be545ad60aca8d8ccea19f3070730b78",
       "desc": "技术笔记与踩坑记录",
       "icon": "✍️"
     },
